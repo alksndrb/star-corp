@@ -13,7 +13,7 @@ function Home() {
   return (
     <main className="flex flex-col items-center justify-center pt-[100px] bg-dark">
       <div className="display">
-        <div className="top h-[500px] object-fill w-full bg-lightgray shadow-2xl flex relative flex-col-reverse justify-end sm:flex-row ">
+        <div className="top h-[350px] sm:h-[500px] object-fill w-full bg-lightgray shadow-2xl flex relative flex-col-reverse justify-end sm:flex-row ">
           <div className="w-full h-full absolute z-[-5]">
             <Image src={Pic} alt="" className="h-full object-cover" />
           </div>
@@ -24,7 +24,7 @@ function Home() {
               equipment
             </h1>
           </div>
-          <div className="p-[1rem] flex h-[50%] sm:h-auto sm:w-[50%] justify-center ">
+          <div className="p-[1rem] flex h-[30%] sm:h-auto sm:w-[50%] justify-center ">
             <Image src={logoImg} alt="" className="sm:mt-[-100px]" />
           </div>
         </div>
