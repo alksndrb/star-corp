@@ -181,7 +181,7 @@ function Header() {
           </div>
           {/* --- Logo at the bottom of mobile nav --- */}
           <div className="h-[25vh] absolute bottom-0 -translate-y-[103px] left-0 right-0 flex justify-center items-center">
-            <Image src={logoImg} className="h-[20vh]" />
+            <Image src={logoImg} alt="" className="h-[20vh]" />
           </div>
         </nav>
         {/* --- */}

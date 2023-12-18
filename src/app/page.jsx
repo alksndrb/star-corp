@@ -8,7 +8,7 @@ import Pic3 from "@/public/pic3.jpg";
 import Pic0 from "@/public/pic0.jpg";
 import Pic4 from "@/public/pic4.jpg";
 import Fujifilm from "@/public/Fujifilm.png";
-import Fairtex from "@/public/fairtex.png";
+import Fairtex from "@/public/Fairtex.png";
 function Home() {
   return (
     <main className="flex flex-col items-center justify-center pt-[100px] bg-dark">
@@ -59,10 +59,10 @@ function Home() {
         <div className="right sm:h-[500px] w-full bg-lightgray flex flex-col sm:flex-row">
           <div className="h-[300px] sm:h-full sm:w-[40%] flex sm:block">
             <div className="w-[50%] sm:w-full sm:h-[50%]">
-              <Image src={Pic2} className="h-full object-cover" />
+              <Image src={Pic2} alt="" className="h-full object-cover" />
             </div>
             <div className="w-[50%] sm:w-full sm:h-[50%]">
-              <Image src={Pic3} className="h-full object-cover" />
+              <Image src={Pic3} alt="" className="h-full object-cover" />
             </div>
           </div>
           <div className="mb-[85px] flex flex-col items-center sm:w-[60%] sm:mt-[100px] ">
@@ -70,7 +70,7 @@ function Home() {
               Discover Quality Equipment
             </h2>
             <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
-              We're proud to offer a wide selection of FUJIFILM and FAIRTEX
+              We&apos;re proud to offer a wide selection of FUJIFILM and FAIRTEX
               products and equipment. Explore our range and discover quality and
               innovation seamlessly combined.
             </h3>
