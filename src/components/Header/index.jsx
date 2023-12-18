@@ -46,7 +46,7 @@ function Header() {
   const contact = ["Contact", "Kontakt", "Kontakt"];
 
   return (
-    <header className="w-full h-[100px] bg-lightgray fixed z-[100] shadow-md">
+    <header className="w-full h-[100px] bg-light fixed z-[100] shadow-md">
       <div className="w-full h-[100px] display flex items-center justify-between ">
         <Logo pathLang={pathLang} />
         <button className="inline:block sm:hidden z-50" onClick={toggle}>
@@ -85,7 +85,7 @@ function Header() {
         </button>
         {/* --- Mobile nav --- */}
         <nav
-          className="m-0 w-[100vw] h-[100vh] bg-lightgray absolute top-[100px] 
+          className="m-0 w-[100vw] h-[100vh] bg-light absolute top-[100px] 
           transition-all ease duration-300 flex flex-col  text-2xl capitalize"
           style={{
             left: click ? "0" : "-100vw",

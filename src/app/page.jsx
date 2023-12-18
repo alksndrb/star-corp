@@ -13,7 +13,7 @@ function Home() {
   return (
     <main className="flex flex-col items-center justify-center pt-[100px] bg-dark">
       <div className="display">
-        <div className="top h-[350px] sm:h-[500px] object-fill w-full bg-lightgray shadow-2xl flex relative flex-col-reverse justify-end sm:flex-row ">
+        <div className="top h-[350px] sm:h-[500px] object-fill w-full bg-light shadow-2xl flex relative flex-col-reverse justify-end sm:flex-row ">
           <div className="w-full h-full absolute z-[-5]">
             <Image src={Pic} alt="" className="h-full object-cover" />
           </div>
@@ -29,7 +29,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="left h-auto  sm:h-[500px] w-full bg-lightgray flex flex-col-reverse justify-end sm:flex-row">
+        <div className="left h-auto  sm:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
           <div className="sm:w-[60%] sm:mt-[100px] mb-[70px] flex flex-col items-center">
             <h2 className="font-semibold p-[1rem] text-2xl text-center lg:text-3xl md:pb-[30px]">
               Welcome to{" "}
@@ -56,7 +56,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="right sm:h-[500px] w-full bg-lightgray flex flex-col sm:flex-row">
+        <div className="right sm:h-[500px] w-full bg-light flex flex-col sm:flex-row">
           <div className="h-[300px] sm:h-full sm:w-[40%] flex sm:block">
             <div className="w-[50%] sm:w-full sm:h-[50%]">
               <Image src={Pic2} alt="" className="h-full object-cover" />
@@ -87,7 +87,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="left lg:h-[500px] w-full bg-lightgray flex flex-col-reverse justify-end sm:flex-row">
+        <div className="left lg:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
           <div className="w-full mt-[100px] flex flex-col items-center">
             <h2 className="font-semibold text-2xl lg:text-3xl">Our Partners</h2>
             <div className="px-[2rem] grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 sm:gap-10 mb-[100px] ">
@@ -105,7 +105,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="bottom sm:h-[400px] w-full bg-lightgray flex flex-col sm:flex-row">
+        <div className="bottom sm:h-[400px] w-full bg-light flex flex-col sm:flex-row">
           <div className=" sm:h-full sm:w-[40%] ">
             <Image src={Pic4} alt="" className="h-full object-cover " />
           </div>
