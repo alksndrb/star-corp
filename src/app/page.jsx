@@ -102,11 +102,11 @@ function Home() {
         </div>
 
         <div className="bottom sm:h-[400px] w-full bg-lightgray flex flex-col sm:flex-row">
-          <div className="h-[300px] sm:h-auto sm:w-[40%] ">
+          <div className=" sm:h-auto sm:w-[40%] ">
             <Image src={Pic4} alt="" className="object-cover " />
           </div>
           <div className="sm:w-[60%] sm:mt-[100px] flex flex-col items-center">
-            <h2 className="text-2xl p-[1rem] text-center font-semi lg:text-3xl md:pb-[30px]">
+            <h2 className="font-semibold text-2xl p-[1rem] pt-0 text-center font-semi lg:text-3xl md:pb-[30px]">
               Get in Touch with StarCorp International{" "}
             </h2>
             <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
