@@ -17,7 +17,7 @@ function Home() {
           <div className="w-full h-full absolute z-[-5]">
             <Image src={Pic} alt="" className="h-full object-cover" />
           </div>
-          <div className="w-full h-full absolute z-[-1] bg-gradient-to-t sm:bg-gradient-to-r from-30% sm:from-0% from-dark/70 to-light/10" />
+          <div className="w-full h-full absolute z-[-1] bg-gradient-to-t sm:bg-gradient-to-r from-30% sm:from-0% from-dark/70 to-light/20" />
           <div className="sm:w-[50%] flex justify-center items-center">
             <h1 className="text-light font-semibold text-2xl text-center sm:mt-[-100px] lg:text-3xl sm:text-left p-[1rem] sm:pl-[3rem]">
               Your premier distributor for FUJIFILM and FAIRTEX products and
@@ -62,7 +62,11 @@ function Home() {
               <Image src={Pic2} alt="" className="h-full object-cover" />
             </div>
             <div className="w-[50%] sm:w-full sm:h-[50%]">
-              <Image src={Pic3} alt="" className="h-full object-cover" />
+              <Image
+                src={Pic3}
+                alt=""
+                className="h-full object-cover object-bottom"
+              />
             </div>
           </div>
           <div className="mb-[85px] flex flex-col items-center sm:w-[60%] sm:mt-[100px] ">
@@ -102,11 +106,11 @@ function Home() {
         </div>
 
         <div className="bottom sm:h-[400px] w-full bg-lightgray flex flex-col sm:flex-row">
-          <div className=" sm:h-auto sm:w-[40%] ">
-            <Image src={Pic4} alt="" className="object-cover " />
+          <div className=" sm:h-full sm:w-[40%] ">
+            <Image src={Pic4} alt="" className="h-full object-cover " />
           </div>
           <div className="sm:w-[60%] sm:mt-[100px] flex flex-col items-center">
-            <h2 className="font-semibold text-2xl p-[1rem] pt-0 text-center font-semi lg:text-3xl md:pb-[30px]">
+            <h2 className="font-semibold text-2xl p-[1rem] text-center font-semi lg:text-3xl md:pb-[30px]">
               Get in Touch with StarCorp International{" "}
             </h2>
             <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
