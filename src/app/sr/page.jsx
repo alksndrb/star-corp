@@ -41,8 +41,8 @@ function HomeSR() {
             <h3 className="text-base px-[1rem] lg:text-xl sm:px-[2rem]">
               Kao vodeći distributer u industriji, StarCorp International je
               ključni igrač u pružanju vrhunskih FUJIFILM i FAIRTEX proizvoda i
-              opreme. S posvećenošću kvalitetu i zadovoljstvu kupaca, stvorili
-              smo snažnu reputaciju tokom godina.
+              opreme. Posvećeni kvalitetu i zadovoljstvu kupaca, stvorili smo
+              snažnu reputaciju tokom godina.
             </h3>
             <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
               <Link
