@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Logo from "./Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -45,33 +45,9 @@ function Header() {
   const business = ["Business", "Podnikanie", "Poslovanje"];
   const contact = ["Contact", "Kontakt", "Kontakt"];
 
-  const [disableAnimation, setDisableAnimation] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      // Disable animation during window resize
-      setDisableAnimation(true);
-
-      // Perform your layout adjustments here
-
-      // After a short delay, enable animation
-      setTimeout(() => {
-        setDisableAnimation(false);
-      }, 100); // Adjust the delay as needed
-    };
-
-    // Attach the event listener to the window resize event
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Empty dependency array ensures the effect runs once on mount
-
   return (
     <header className="w-full h-[80px] sm:h-[100px] bg-light fixed z-[100] shadow-md">
-      <div className="w-full h-[80px  ] sm:h-[100px] display flex items-center justify-between ">
+      <div className="w-full h-[80px] sm:h-[100px] display flex items-center justify-between ">
         <Logo pathLang={pathLang} />
         <button className="inline:block sm:hidden z-50" onClick={toggle}>
           <div className="w-12 h-12 cursor-pointer transition-all ease duration-300">
@@ -110,10 +86,8 @@ function Header() {
         {/* --- Mobile nav --- */}
 
         <nav
-          className={`m-0 w-[100vw] navbarH bg-light absolute top-[80px] 
-          transition-all ease duration-300  text-2xl capitalize flex flex-col justify-between ${
-            disableAnimation ? "no-animation" : ""
-          }   `}
+          className="m-0 w-[100vw] navbarH bg-light absolute top-[80px] 
+          transition-all ease duration-300  text-2xl capitalize flex flex-col justify-between"
           style={{
             left: click ? "0" : "-100vw",
           }}
