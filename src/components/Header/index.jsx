@@ -215,7 +215,7 @@ function Header() {
             <Image
               src={lang === 2 ? srFlag : lang === 1 ? skFlag : enFlag}
               alt="langFlg"
-              className="w-[20px] md:w-[25px] tranisition-all ease duration-200"
+              className="w-[20px] md:w-[25px] tranisition-all ease duration-200 shadow-2xl"
             />
 
             <div className="absolute  top-[-12px] left-[-12px] right-[-12px] hidden flex-col text-sm text-dark bg-gradient-to-b bg-[#EFF0F4] ring-primary/10 ring-1  group-hover:flex shadow-md z-10 ">

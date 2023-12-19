@@ -77,8 +77,8 @@ function HomeSR() {
             </h2>
             <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
               S ponosom vam predstavljamo širok asortiman FUJIFILM i FAIRTEX
-              proizvoda i opreme. Istražite naš asortiman i otkrijte kvalitet i
-              inovaciju besprekorno kombinovane.
+              proizvoda i opreme. Istražite našu ponudu i oktrite inovativne
+              proizvode čiji će vas kvalitet oduševiti.
             </h3>
             <div className="p-[1rem] w-full flex sm:p-[2rem] justify-end">
               <Link
