@@ -1,4 +1,4 @@
-import React, { startTransition } from "react";
+import React from "react";
 import logoImg from "@/public/logo.svg";
 import { GravityUiArrowRight } from "../components/Icons/ArrowRight";
 import Image from "next/image";
@@ -9,9 +9,10 @@ import Pic0 from "@/public/pic0.jpg";
 import Pic4 from "@/public/pic4.jpg";
 import Fujifilm from "@/public/Fujifilm.png";
 import Fairtex from "@/public/Fairtex.png";
+import Link from "next/link";
 function Home() {
   return (
-    <main className="flex flex-col items-center justify-center pt-[100px] bg-dark">
+    <main className="flex flex-col items-center justify-center pt-[80px] sm:pt-[100px] bg-dark">
       <div className="display">
         <div className="top h-[350px] sm:h-[500px] object-fill w-full bg-light shadow-2xl flex relative flex-col-reverse justify-end sm:flex-row ">
           <div className="w-full h-full absolute z-[-5]">
@@ -46,9 +47,12 @@ function Home() {
               the years.
             </h3>
             <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
-              <button className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200">
+              <Link
+                href={`/about`}
+                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
+              >
                 Learn more about us <GravityUiArrowRight className="inline" />
-              </button>
+              </Link>
             </div>
           </div>
           <div className="h-[300px] sm:h-auto sm:w-[40%]">
@@ -57,15 +61,15 @@ function Home() {
         </div>
 
         <div className="right sm:h-[500px] w-full bg-light flex flex-col sm:flex-row">
-          <div className="h-[300px] sm:h-full sm:w-[40%] flex sm:block">
-            <div className="w-[50%] sm:w-full sm:h-[50%]">
+          <div className="sm:h-full sm:w-[40%] block">
+            <div className="h-[40vw] w-full sm:h-[50%]">
               <Image src={Pic2} alt="" className="h-full object-cover" />
             </div>
-            <div className="w-[50%] sm:w-full sm:h-[50%]">
+            <div className="h-[35vw] w-full sm:h-[50%]">
               <Image
                 src={Pic3}
                 alt=""
-                className="h-full object-cover object-bottom"
+                className="h-full object-cover object-center sm:object-bottom"
               />
             </div>
           </div>
@@ -79,10 +83,13 @@ function Home() {
               innovation seamlessly combined.
             </h3>
             <div className="p-[1rem] w-full flex sm:p-[2rem] justify-end">
-              <button className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200">
+              <Link
+                href={`/business`}
+                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
+              >
                 Learn more about our business{" "}
                 <GravityUiArrowRight className="inline" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -118,9 +125,12 @@ function Home() {
               dedicated team at StarCorp International.
             </h3>
             <div className="p-[1rem] sm:p-[2rem] w-full flex justify-end">
-              <button className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200">
+              <Link
+                href={`/contact`}
+                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
+              >
                 Contact Us <GravityUiArrowRight className="inline" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

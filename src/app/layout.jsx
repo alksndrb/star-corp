@@ -2,7 +2,7 @@ import { Inter, Orbitron } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import { cx } from "../utils";
-
+import Footer from "../components/Footer";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
