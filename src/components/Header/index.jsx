@@ -84,42 +84,44 @@ function Header() {
           </div>
         </button>
         {/* --- Mobile nav --- */}
+
         <nav
-          className="m-0 w-[100vw] h-[100vh] bg-light absolute top-[80px] 
-          transition-all ease duration-300 flex flex-col  text-2xl capitalize"
+          className="m-0 w-[100vw] navbarH bg-light absolute top-[80px] 
+          transition-all ease duration-300  text-2xl capitalize flex flex-col justify-between"
           style={{
             left: click ? "0" : "-100vw",
           }}
         >
-          <Link
-            href={pathLang}
-            className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
-            onClick={toggle}
-          >
-            {home[lang]}
-          </Link>
-          <Link
-            href={`/about${pathLang}`}
-            className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
-            onClick={toggle}
-          >
-            {about[lang]}
-          </Link>
-          <Link
-            href={`/business${pathLang}`}
-            className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
-            onClick={toggle}
-          >
-            {business[lang]}
-          </Link>
-          <Link
-            href={`/contact${pathLang}`}
-            className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
-            onClick={toggle}
-          >
-            {contact[lang]}
-          </Link>
-          {/* <div className="flex items-center justify-center py-2">
+          <div className="flex flex-col">
+            <Link
+              href={pathLang}
+              className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
+              onClick={toggle}
+            >
+              {home[lang]}
+            </Link>
+            <Link
+              href={`/about${pathLang}`}
+              className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
+              onClick={toggle}
+            >
+              {about[lang]}
+            </Link>
+            <Link
+              href={`/business${pathLang}`}
+              className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
+              onClick={toggle}
+            >
+              {business[lang]}
+            </Link>
+            <Link
+              href={`/contact${pathLang}`}
+              className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
+              onClick={toggle}
+            >
+              {contact[lang]}
+            </Link>
+            {/* <div className="flex items-center justify-center py-2">
             <Link href={pathPage + "/"}>
               <Image
                 src={enFlag}
@@ -141,47 +143,48 @@ function Header() {
                 className="px-2 h-[30px] w-auto"
               ></Image>
             </Link>
-          </div> */}
-          <div
-            className="group flex items-center justify-center py-3 relative cursor-pointer"
-            onClick={toggleLangClick}
-          >
-            <Image
-              src={lang === 2 ? srFlag : lang === 1 ? skFlag : enFlag}
-              alt="langFlg"
-              className="w-[40px]"
-            />
+          </div> */}{" "}
             <div
-              className="absolute top-0 flex-col text-sm text-dark  bg-primary/10 ring-1 ring-primary/20 py-3 shadow-md z-10 "
-              style={{ display: langClick ? "flex" : "none" }}
+              className="group flex items-center justify-center py-3 relative cursor-pointer"
+              onClick={toggleLangClick}
             >
-              <div className="px-3">
-                <Image
-                  src={lang === 2 ? srFlag : lang === 1 ? skFlag : enFlag}
-                  alt="langFlg"
-                  className="w-[40px]"
-                />
+              <Image
+                src={lang === 2 ? srFlag : lang === 1 ? skFlag : enFlag}
+                alt="langFlg"
+                className="w-[40px]"
+              />
+              <div
+                className="absolute top-0 flex-col text-sm text-dark  bg-primary/10 ring-1 ring-primary/20 py-3 shadow-md z-10 "
+                style={{ display: langClick ? "flex" : "none" }}
+              >
+                <div className="px-3">
+                  <Image
+                    src={lang === 2 ? srFlag : lang === 1 ? skFlag : enFlag}
+                    alt="langFlg"
+                    className="w-[40px]"
+                  />
+                </div>
+                {lang != 0 && (
+                  <Link href={pathPage + "/"} className="p-3 pb-0 block">
+                    <Image src={enFlag} alt="langFlg" className="w-[40px]" />
+                  </Link>
+                )}
+                {lang != 1 && (
+                  <Link href={pathPage + "sk"} className="p-3 pb-0 block">
+                    <Image src={skFlag} alt="langFlg" className="w-[40px]" />
+                  </Link>
+                )}
+                {lang != 2 && (
+                  <Link href={pathPage + "sr"} className="p-3 pb-0 block">
+                    <Image src={srFlag} alt="langFlg" className="w-[40px]" />
+                  </Link>
+                )}
               </div>
-              {lang != 0 && (
-                <Link href={pathPage + "/"} className="p-3 pb-0 block">
-                  <Image src={enFlag} alt="langFlg" className="w-[40px]" />
-                </Link>
-              )}
-              {lang != 1 && (
-                <Link href={pathPage + "sk"} className="p-3 pb-0 block">
-                  <Image src={skFlag} alt="langFlg" className="w-[40px]" />
-                </Link>
-              )}
-              {lang != 2 && (
-                <Link href={pathPage + "sr"} className="p-3 pb-0 block">
-                  <Image src={srFlag} alt="langFlg" className="w-[40px]" />
-                </Link>
-              )}
-            </div>
+            </div>{" "}
           </div>
           {/* --- Logo at the bottom of mobile nav --- */}
-          <div className="h-[25dvh] absolute bottom-0 -translate-y-[103px] left-0 right-0 flex justify-center items-center">
-            <Image src={logoImg} alt="" className="h-[20dvh]" />
+          <div className="h-[25vh] flex justify-center items-center">
+            <Image src={logoImg} alt="" className="h-[20vh]" />
           </div>
         </nav>
         {/* --- */}

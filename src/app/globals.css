@@ -39,6 +39,9 @@
 .minH {
   min-height: calc(100vh - 291px - 2rem);
 }
+.navbarH {
+  height: calc(100vh - 80px);
+}
 @media (min-width: 1024px) {
   .minH {
     min-height: calc(100vh - 309px - 2rem);
