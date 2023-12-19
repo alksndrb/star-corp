@@ -26,19 +26,19 @@ function Business() {
             FUJIFILM cameras and solutions. From professional-grade cameras
             capturing the minutest details to user-friendly models perfect for
             everyday use, our selection caters to photographers of all levels.
-            Discover the art of visual storytelling with FUJIFILM's cutting-edge
-            imaging solutions.
+            Discover the art of visual storytelling with FUJIFILM`&apos;`s
+            cutting-edge imaging solutions.
           </p>
           <h2 className="font-semibold p-[1rem] pt-0 sm:pb-[2rem] text-2xl text-center lg:text-3xl sm:w-[70%]">
             FAIRTEX Sports Gear
           </h2>
           <p className="text-base px-[1rem] lg:text-xl sm:px-[2rem] pb-[1rem] sm:pb-[2rem]">
             Elevate your sporting experience with FAIRTEX, known for its
-            high-performance sports gear. Whether you're a professional athlete
-            or a fitness enthusiast, our carefully curated selection includes
-            gear that meets the highest standards of quality and durability.
-            From gloves to training equipment, FAIRTEX is your trusted companion
-            in achieving peak athletic performance.
+            high-performance sports gear. Whether you`&apos;`re a professional
+            athlete or a fitness enthusiast, our carefully curated selection
+            includes gear that meets the highest standards of quality and
+            durability. From gloves to training equipment, FAIRTEX is your
+            trusted companion in achieving peak athletic performance.
           </p>
           <p className="text-base px-[1rem] lg:text-xl sm:px-[2rem] pb-[1rem] sm:pb-[6rem]">
             At StarCorp International, we understand the importance of providing

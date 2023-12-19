@@ -65,7 +65,7 @@ function Footer() {
           <p>Email: office@starcorpinternational.com</p>
         </div>
         <div className="flex justify-center sm:justify-end items-center">
-          <Image src={logoImg} className="w-[85%] sm:h-[85%]" />
+          <Image src={logoImg} alt="" className="w-[85%] sm:h-[85%]" />
         </div>
       </div>
     </footer>

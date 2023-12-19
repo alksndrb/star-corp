@@ -19,8 +19,9 @@ function About() {
             Step into a world of technological sophistication and athletic
             excellence with StarCorp International, your premier distributor for
             FUJIFILM and FAIRTEX products and equipment. Our journey began in
-            2009, and since then, we've established ourselves as a reliable
-            source for cutting-edge imaging solutions and top-tier sports gear.{" "}
+            2009, and since then, we`&apos;`ve established ourselves as a
+            reliable source for cutting-edge imaging solutions and top-tier
+            sports gear.{" "}
           </p>
           <p className="text-base px-[1rem] lg:text-xl sm:px-[2rem] pb-[1rem] sm:pb-[6rem]">
             Established as a leading distributor in the industry, StarCorp
