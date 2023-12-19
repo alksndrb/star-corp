@@ -85,8 +85,7 @@ function HomeSR() {
                 href={`/business/sr`}
                 className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
               >
-                Saznajte više o našem poslovanju{" "}
-                <GravityUiArrowRight className="inline" />
+                Saznajte više <GravityUiArrowRight className="inline" />
               </Link>
             </div>
           </div>
