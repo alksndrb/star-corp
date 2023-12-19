@@ -42,6 +42,9 @@
 .navbarH {
   height: calc(100dvh - 80px);
 }
+.no-animation {
+  transition: none !important; /* Disable transition */
+}
 @media (min-width: 1024px) {
   .minH {
     min-height: calc(100vh - 309px - 2rem);
