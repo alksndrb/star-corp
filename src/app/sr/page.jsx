@@ -7,6 +7,7 @@ import Pic2 from "@/public/pic2.jpg";
 import Pic3 from "@/public/pic3.jpg";
 import Pic0 from "@/public/pic0.jpg";
 import Pic4 from "@/public/pic4.jpg";
+import Hookah from "@/public/hookah.jpg";
 import Fujifilm from "@/public/Fujifilm.png";
 import Fairtex from "@/public/Fairtex.png";
 import Link from "next/link";
@@ -28,7 +29,7 @@ function HomeSR() {
             <Image src={logoImg} alt="" className="sm:mt-[-100px]" />
           </div>
         </div>
-
+        {/* Welcome */}
         <div className="left h-auto  sm:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
           <div className="sm:w-[60%] sm:mt-[100px] mb-[70px] flex flex-col items-center">
             <h2 className="font-semibold p-[1rem] text-2xl text-center lg:text-3xl md:pb-[30px]">
@@ -57,40 +58,92 @@ function HomeSR() {
             <Image src={Pic0} alt="" className="h-full object-cover" />
           </div>
         </div>
-
+        {/* Hookah */}
         <div className="right sm:h-[500px] w-full bg-light flex flex-col sm:flex-row">
-          <div className="sm:h-full sm:w-[40%] block">
-            <div className="h-[40vw] w-full sm:h-[50%]">
-              <Image src={Pic2} alt="" className="h-full object-cover" />
-            </div>
-            <div className="h-[35vw] w-full sm:h-[50%]">
-              <Image
-                src={Pic3}
-                alt=""
-                className="h-full object-cover object-center sm:object-bottom"
-              />
-            </div>
+          <div className="h-[300px] sm:h-auto sm:w-[40%]">
+            <Image
+              src={Hookah}
+              alt=""
+              className="h-full object-cover object-bottom"
+            />
           </div>
           <div className="mb-[85px] flex flex-col items-center sm:w-[60%] sm:mt-[100px] ">
             <h2 className="text-2xl font-semibold p-[1rem] text-center lg:text-3xl md:pb-[30px]">
-              Otkrijte kvalitetnu opremu
+              Nargila Melasa
             </h2>
             <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
-              S ponosom vam predstavljamo širok asortiman FUJIFILM i FAIRTEX
-              proizvoda i opreme. Istražite našu ponudu i oktrite inovativne
-              proizvode čiji će vas kvalitet oduševiti.
+              Sa visokim standardima kvaliteta, proizvodi su pažljivo
+              formulisani kako bi zadovoljili ukuse i zahteve najistančanijih
+              korisnika.
             </h3>
             <div className="p-[1rem] w-full flex sm:p-[2rem] justify-end">
               <Link
-                href={`/business/sr`}
+                href={`/business/hookah-molasses/sr`}
                 className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
               >
-                Saznajte više <GravityUiArrowRight className="inline" />
+                Saznajte više
+                <GravityUiArrowRight className="inline" />
               </Link>
             </div>
           </div>
         </div>
-
+        {/* FujiFilm */}
+        <div className="left h-auto  sm:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
+          <div className="sm:w-[60%] sm:mt-[100px] mb-[70px] flex flex-col items-center">
+            <h2 className="font-semibold p-[1rem] text-2xl text-center lg:text-3xl md:pb-[30px]">
+              FUJIFILM
+            </h2>
+            <h3 className="text-base px-[1rem] lg:text-xl sm:px-[2rem]">
+              Otkrijte umetnost vizuelnog pripovedanja uz najmodernija FUJIFILM
+              rešenja za slikanje.
+            </h3>
+            <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
+              <Link
+                href={`/business/fujifilm/sr`}
+                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
+              >
+                Saznajte više
+                <GravityUiArrowRight className="inline" />
+              </Link>
+            </div>
+          </div>
+          <div className="h-[300px] sm:h-auto sm:w-[40%]">
+            <Image
+              src={Pic2}
+              alt=""
+              className="h-full object-cover object-top"
+            />
+          </div>
+        </div>
+        {/* Fairtex */}
+        <div className="right sm:h-[500px] w-full bg-light flex flex-col sm:flex-row">
+          <div className="h-[300px] sm:h-auto sm:w-[40%]">
+            <Image
+              src={Pic3}
+              alt=""
+              className="h-full object-cover object-top"
+            />
+          </div>
+          <div className="mb-[85px] flex flex-col items-center sm:w-[60%] sm:mt-[100px] ">
+            <h2 className="text-2xl font-semibold p-[1rem] text-center lg:text-3xl md:pb-[30px]">
+              FAIRTEX Sports Gear
+            </h2>
+            <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
+              Od rukavica do trenerske opreme, FAIRTEX je vaš pouzdani saputnik
+              ka postizanju vrhunskih sportskih rezultata.
+            </h3>
+            <div className="p-[1rem] w-full flex sm:p-[2rem] justify-end">
+              <Link
+                href={`/business/fairtex/sr`}
+                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
+              >
+                Saznajte više
+                <GravityUiArrowRight className="inline" />
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* Partners */}
         <div className="left lg:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
           <div className="w-full mt-[100px] flex flex-col items-center">
             <h2 className="font-semibold text-2xl lg:text-3xl">
@@ -110,7 +163,7 @@ function HomeSR() {
             </div>
           </div>
         </div>
-
+        {/* Contact */}
         <div className="bottom sm:h-[400px] w-full bg-light flex flex-col sm:flex-row">
           <div className=" sm:h-full sm:w-[40%] ">
             <Image src={Pic4} alt="" className="h-full object-cover " />

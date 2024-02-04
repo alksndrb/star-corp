@@ -7,6 +7,7 @@ import Pic2 from "@/public/pic2.jpg";
 import Pic3 from "@/public/pic3.jpg";
 import Pic0 from "@/public/pic0.jpg";
 import Pic4 from "@/public/pic4.jpg";
+import Hookah from "@/public/hookah.jpg";
 import Fujifilm from "@/public/Fujifilm.png";
 import Fairtex from "@/public/Fairtex.png";
 import Link from "next/link";
@@ -14,6 +15,7 @@ function Home() {
   return (
     <main className="flex flex-col items-center justify-center pt-[80px] sm:pt-[100px] bg-dark">
       <div className="display">
+        {/* banner */}
         <div className="top h-[350px] sm:h-[500px] object-fill w-full bg-light shadow-2xl flex relative flex-col-reverse justify-end sm:flex-row ">
           <div className="w-full h-full absolute z-[-5]">
             <Image src={Pic} alt="" className="h-full object-cover" />
@@ -29,7 +31,7 @@ function Home() {
             <Image src={logoImg} alt="" className="sm:mt-[-100px]" />
           </div>
         </div>
-
+        {/* Welcome to starcorp */}
         <div className="left h-auto  sm:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
           <div className="sm:w-[60%] sm:mt-[100px] mb-[70px] flex flex-col items-center">
             <h2 className="font-semibold p-[1rem] text-2xl text-center lg:text-3xl md:pb-[30px]">
@@ -40,11 +42,10 @@ function Home() {
               International
             </h2>
             <h3 className="text-base px-[1rem] lg:text-xl sm:px-[2rem]">
-              Established as a leading distributor in the industry, StarCorp
-              International has been a key player in providing top-tier FUJIFILM
-              and FAIRTEX products and equipment. With a commitment to quality
-              and customer satisfaction, we have built a strong reputation over
-              the years.
+              Your reliable partner in distributing top-quality tobacco products
+              for water pipes and FUJIFILM and FAIRTEX products and
+              equipment.Our dedication to providing an exceptional experience to
+              users worldwide makes us the industry's top choice.
             </h3>
             <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
               <Link
@@ -59,41 +60,92 @@ function Home() {
             <Image src={Pic0} alt="" className="h-full object-cover" />
           </div>
         </div>
-
+        {/* Hookah */}
         <div className="right sm:h-[500px] w-full bg-light flex flex-col sm:flex-row">
-          <div className="sm:h-full sm:w-[40%] block">
-            <div className="h-[40vw] w-full sm:h-[50%]">
-              <Image src={Pic2} alt="" className="h-full object-cover" />
-            </div>
-            <div className="h-[35vw] w-full sm:h-[50%]">
-              <Image
-                src={Pic3}
-                alt=""
-                className="h-full object-cover object-center sm:object-bottom"
-              />
-            </div>
+          <div className="h-[300px] sm:h-auto sm:w-[40%]">
+            <Image
+              src={Hookah}
+              alt=""
+              className="h-full object-cover object-bottom"
+            />
           </div>
           <div className="mb-[85px] flex flex-col items-center sm:w-[60%] sm:mt-[100px] ">
             <h2 className="text-2xl font-semibold p-[1rem] text-center lg:text-3xl md:pb-[30px]">
-              Discover Quality Equipment
+              Hookah Molasses
             </h2>
             <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
-              We&apos;re proud to offer a wide selection of FUJIFILM and FAIRTEX
-              products and equipment. Explore our range and discover quality and
-              innovation seamlessly combined.
+              With high-quality standards, the products are meticulously
+              formulated to satisfy the tastes and demands of the most
+              discerning users.
             </h3>
             <div className="p-[1rem] w-full flex sm:p-[2rem] justify-end">
               <Link
-                href={`/business`}
+                href={`/business/hookah-molasses`}
                 className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
               >
-                Learn more about our business{" "}
+                Learn more
                 <GravityUiArrowRight className="inline" />
               </Link>
             </div>
           </div>
         </div>
-
+        {/* FujiFilm */}
+        <div className="left h-auto  sm:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
+          <div className="sm:w-[60%] sm:mt-[100px] mb-[70px] flex flex-col items-center">
+            <h2 className="font-semibold p-[1rem] text-2xl text-center lg:text-3xl md:pb-[30px]">
+              FUJIFILM
+            </h2>
+            <h3 className="text-base px-[1rem] lg:text-xl sm:px-[2rem]">
+              Discover the art of visual storytelling with FUJIFILM's
+              cutting-edge imaging solutions.
+            </h3>
+            <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
+              <Link
+                href={`/business/fujifilm`}
+                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
+              >
+                Learn more
+                <GravityUiArrowRight className="inline" />
+              </Link>
+            </div>
+          </div>
+          <div className="h-[300px] sm:h-auto sm:w-[40%]">
+            <Image
+              src={Pic2}
+              alt=""
+              className="h-full object-cover object-top"
+            />
+          </div>
+        </div>
+        {/* Fairtex */}
+        <div className="right sm:h-[500px] w-full bg-light flex flex-col sm:flex-row">
+          <div className="h-[300px] sm:h-auto sm:w-[40%]">
+            <Image
+              src={Pic3}
+              alt=""
+              className="h-full object-cover object-top"
+            />
+          </div>
+          <div className="mb-[85px] flex flex-col items-center sm:w-[60%] sm:mt-[100px] ">
+            <h2 className="text-2xl font-semibold p-[1rem] text-center lg:text-3xl md:pb-[30px]">
+              FAIRTEX Sports Gear
+            </h2>
+            <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
+              From gloves to training equipment, FAIRTEX is your trusted
+              companion in achieving peak athletic performance.
+            </h3>
+            <div className="p-[1rem] w-full flex sm:p-[2rem] justify-end">
+              <Link
+                href={`/business/fairtex`}
+                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
+              >
+                Learn more
+                <GravityUiArrowRight className="inline" />
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* Partners */}
         <div className="left lg:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
           <div className="w-full mt-[100px] flex flex-col items-center">
             <h2 className="font-semibold text-2xl lg:text-3xl">Our Partners</h2>
@@ -111,7 +163,7 @@ function Home() {
             </div>
           </div>
         </div>
-
+        {/* Contact */}
         <div className="bottom sm:h-[400px] w-full bg-light flex flex-col sm:flex-row">
           <div className=" sm:h-full sm:w-[40%] ">
             <Image src={Pic4} alt="" className="h-full object-cover " />

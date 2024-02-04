@@ -14,20 +14,10 @@ function BusinessSR() {
         <div className="bottom-alt w-full bg-light shadow-2xl flex flex-col items-center">
           <p className="text-base px-[1rem] lg:text-xl sm:px-[2rem] pb-[1rem] sm:pb-[2rem] pt-[110px]">
             Dobrodošli u StarCorp International, gde se inovacija susreće s
-            performansama u svetu fotografije i sporta. Kao vaš vodeći
-            distributer, s ponosom vam predstavljamo širok asortiman FUJIFILM i
-            FAIRTEX proizvoda i opreme.
+            performansama u svetu sporta. Kao vaš vodeći distributer, s ponosom
+            vam predstavljamo širok asortiman FAIRTEX proizvoda i opreme.
           </p>
-          <h2 className="font-semibold p-[1rem] pt-0 sm:pb-[2rem] text-2xl text-center lg:text-3xl sm:w-[70%]">
-            FUJIFILM
-          </h2>
-          <p className="text-base px-[1rem] lg:text-xl sm:px-[2rem] pb-[1rem] sm:pb-[2rem]">
-            Istražite vrhunsku tehnologiju slikanja sa našom kolekcijom FUJIFILM
-            kamera i rešenja. Od profesionalnih kamera koje beleže najmanje
-            detalje do modela pogodnih za svakodnevnu upotrebu, naša selekcija
-            zadovoljava potrebe fotografa svih nivoa. Otkrijte umetnost
-            vizuelnog pripovedanja uz najmodernija FUJIFILM rešenja za slikanje.
-          </p>
+
           <h2 className="font-semibold p-[1rem] pt-0 sm:pb-[2rem] text-2xl text-center lg:text-3xl sm:w-[70%]">
             FAIRTEX
           </h2>
@@ -44,7 +34,7 @@ function BusinessSR() {
             U StarCorp International, shvatamo važnost pružanja našim kupcima
             proizvoda vrhunskog kvaliteta koji se slažu sa njihovim strastima.
             Istražite naš katalog proizvoda da biste doživeli spoj inovacija,
-            pouzdanosti i izvrsnosti u svakom FUJIFILM i FAIRTEX artiklu.
+            pouzdanosti i izvrsnosti u svakom FAIRTEX artiklu.
           </p>
         </div>
       </div>

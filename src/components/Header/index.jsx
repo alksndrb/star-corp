@@ -4,16 +4,17 @@ import Logo from "./Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import enFlag from "../../../public/en.png";
-import skFlag from "../../../public/sk.png";
+import czFlag from "../../../public/cz.png";
 import srFlag from "../../../public/sr.png";
 import Image from "next/image";
 import logoImg from "@/public/logo.svg";
-
+import { GravityUiArrowDown } from "../../components/Icons/ArrowDown";
+import { GravityUiArrowUp } from "../../components/Icons/ArrowUp";
 function Header() {
   const path = usePathname();
   let pathLang = path.slice(path.length - 3);
   let pathPage;
-  if (pathLang === "/sr" || pathLang === "/sk") {
+  if (pathLang === "/sr" || pathLang === "/cz") {
     pathPage = path.slice(0, path.length - 2);
   } else {
     pathPage = path;
@@ -23,32 +24,40 @@ function Header() {
     pathPage = pathPage + "/";
   }
   const [lang, setLang] = React.useState(
-    pathLang === "/sr" ? 2 : pathLang === "/sk" ? 1 : 0
+    pathLang === "/sr" ? 2 : pathLang === "/cz" ? 1 : 0
   );
   useEffect(() => {
-    setLang(pathLang === "/sr" ? 2 : pathLang === "/sk" ? 1 : 0);
+    setLang(pathLang === "/sr" ? 2 : pathLang === "/cz" ? 1 : 0);
   }, [pathLang]);
   const [click, setClick] = React.useState(false);
+
+  const [businessClick, setBusinessClick] = React.useState(false);
 
   const [langClick, setLangClick] = React.useState(false);
 
   const toggle = () => {
     setClick(!click);
     setLangClick(false);
+    setBusinessClick(false);
   };
   const toggleLangClick = () => {
     setLangClick(!langClick);
   };
+  const toggleBusinessClick = () => {
+    setBusinessClick(!businessClick);
+  };
 
   const home = ["Home", "Úvod", "Početna"];
-  const about = ["About", "O portáli", "O nama"];
-  const business = ["Business", "Podnikanie", "Poslovanje"];
+  const about = ["About", "O nás", "O nama"];
+  const business = ["Business", "Obchod", "Poslovanje"];
+  const hookah = ["Hookah Molasses", "Nargila Melasa", "Nargila Melasa"];
   const contact = ["Contact", "Kontakt", "Kontakt"];
 
   return (
     <header className="w-full h-[80px] sm:h-[100px] bg-light fixed z-[100] shadow-md">
       <div className="w-full h-[80px] sm:h-[100px] display flex items-center justify-between ">
         <Logo pathLang={pathLang} />
+        {/* mobile drop down button */}
         <button className="inline:block sm:hidden z-50" onClick={toggle}>
           <div className="w-12 h-12 cursor-pointer transition-all ease duration-300">
             <div className="relative">
@@ -84,7 +93,6 @@ function Header() {
           </div>
         </button>
         {/* --- Mobile nav --- */}
-
         <nav
           className="m-0 w-[100vw] navbarH bg-light absolute top-[80px] 
           transition-all ease duration-300  text-2xl capitalize flex flex-col justify-between"
@@ -93,6 +101,7 @@ function Header() {
           }}
         >
           <div className="flex flex-col">
+            {/* Home */}
             <Link
               href={pathLang}
               className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
@@ -100,6 +109,7 @@ function Header() {
             >
               {home[lang]}
             </Link>
+            {/* About */}
             <Link
               href={`/about${pathLang}`}
               className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
@@ -107,49 +117,59 @@ function Header() {
             >
               {about[lang]}
             </Link>
-            <Link
-              href={`/business${pathLang}`}
-              className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
-              onClick={toggle}
-            >
-              {business[lang]}
-            </Link>
+            {/* Business */}
+            <div className="w-[90%] mx-auto py-2 text-center border-b border-dark/50">
+              <div onClick={toggleBusinessClick}>
+                {business[lang]}
+                <GravityUiArrowDown
+                  style={{ display: businessClick ? "none" : "inline" }}
+                />
+                <GravityUiArrowUp
+                  style={{ display: businessClick ? "inline" : "none" }}
+                />
+              </div>
+              <div
+                className="flex-col text-dark"
+                style={{ display: businessClick ? "flex" : "none" }}
+              >
+                <Link
+                  href={`/business/hookah-molasses/${pathLang}`}
+                  className=" mx-auto text-center text-[20px]"
+                  onClick={toggle}
+                >
+                  {hookah[lang]}
+                </Link>
+                <Link
+                  href={`/business/fujifilm${pathLang}`}
+                  className=" mx-auto text-center text-[20px]"
+                  onClick={toggle}
+                >
+                  FUJIFILM
+                </Link>
+                <Link
+                  href={`/business/fairtex${pathLang}`}
+                  className=" mx-auto text-center text-[20px]"
+                  onClick={toggle}
+                >
+                  FAIRTEX
+                </Link>
+              </div>
+            </div>
+            {/* Contact */}
             <Link
               href={`/contact${pathLang}`}
               className="w-[90%] mx-auto py-2 text-center border-b border-dark/50"
               onClick={toggle}
             >
               {contact[lang]}
-            </Link>
-            {/* <div className="flex items-center justify-center py-2">
-            <Link href={pathPage + "/"}>
-              <Image
-                src={enFlag}
-                alt="langFlg"
-                className="px-2 h-[30px] w-auto"
-              ></Image>
-            </Link>
-            <Link href={pathPage + "sk"}>
-              <Image
-                src={skFlag}
-                alt="langFlg"
-                className="px-2 h-[30px] w-auto"
-              ></Image>
-            </Link>
-            <Link href={pathPage + "sr"}>
-              <Image
-                src={srFlag}
-                alt="langFlg"
-                className="px-2 h-[30px] w-auto"
-              ></Image>
-            </Link>
-          </div> */}{" "}
+            </Link>{" "}
+            {/* lang selector */}
             <div
               className="group flex items-center justify-center py-3 relative cursor-pointer"
               onClick={toggleLangClick}
             >
               <Image
-                src={lang === 2 ? srFlag : lang === 1 ? skFlag : enFlag}
+                src={lang === 2 ? srFlag : lang === 1 ? czFlag : enFlag}
                 alt="langFlg"
                 className="w-[40px]"
               />
@@ -159,7 +179,7 @@ function Header() {
               >
                 <div className="px-3">
                   <Image
-                    src={lang === 2 ? srFlag : lang === 1 ? skFlag : enFlag}
+                    src={lang === 2 ? srFlag : lang === 1 ? czFlag : enFlag}
                     alt="langFlg"
                     className="w-[40px]"
                   />
@@ -170,8 +190,8 @@ function Header() {
                   </Link>
                 )}
                 {lang != 1 && (
-                  <Link href={pathPage + "sk"} className="p-3 pb-0 block">
-                    <Image src={skFlag} alt="langFlg" className="w-[40px]" />
+                  <Link href={pathPage + "cz"} className="p-3 pb-0 block">
+                    <Image src={czFlag} alt="langFlg" className="w-[40px]" />
                   </Link>
                 )}
                 {lang != 2 && (
@@ -189,34 +209,60 @@ function Header() {
         </nav>
         {/* --- */}
         <nav className="w-max hidden sm:flex uppercase text-base lg:text-xl font-semibold items-center">
+          {/* Home */}
           <Link
             href={pathLang}
             className="mr-2 md:mr-3 lg:mr-4 hover:text-primary  tranisition-all ease duration-200"
           >
             {home[lang]}
           </Link>
+          {/* About */}
           <Link
             href={`/about${pathLang}`}
             className="mx-2 md:mx-3 lg:mx-4 hover:text-primary tranisition-all ease duration-200"
           >
             {about[lang]}
           </Link>
-
-          <Link
-            href={`/business${pathLang}`}
-            className="mx-2 md:mx-3 lg:mx-4 hover:text-primary tranisition-all ease duration-200"
-          >
+          {/* Business */}
+          <div className="group inline-block mx-2 md:mx-3 lg:mx-4 relative cursor-pointer h-full ">
             {business[lang]}
-          </Link>
+            <GravityUiArrowDown className="inline" />
+            <div className="absolute  left-[-12px] right-[-12px] pt-[2px] top-[-2px] hidden flex-col text-dark bg-gradient-to-b bg-[#EFF0F4] ring-primary/10 ring-1  group-hover:flex shadow-md z-10 ">
+              <div className="pl-3">
+                {business[lang]}
+                <GravityUiArrowDown className="inline" />
+              </div>
+              <Link
+                className="text-center capitalize pt-2 text-[15px] hover:text-primary"
+                href={`/business/hookah-molasses${pathLang}`}
+              >
+                {hookah[lang]}
+              </Link>
+              <Link
+                className="text-center pt-2 text-[15px] hover:text-primary"
+                href={`/business/fujifilm${pathLang}`}
+              >
+                fujifilm
+              </Link>
+              <Link
+                className="text-center pt-2 pb-1 text-[15px] hover:text-primary"
+                href={`/business/fairtex${pathLang}`}
+              >
+                FAIRTEX
+              </Link>
+            </div>
+          </div>
+          {/* Contact */}
           <Link
             href={`/contact${pathLang}`}
             className="mx-2 md:mx-3 lg:mx-4 hover:text-primary tranisition-all ease duration-200"
           >
             {contact[lang]}
           </Link>
+          {/* lang selector */}
           <div className="group inline-block ml-2 ml:mx-3 lg:ml-4 relative cursor-pointer h-full ">
             <Image
-              src={lang === 2 ? srFlag : lang === 1 ? skFlag : enFlag}
+              src={lang === 2 ? srFlag : lang === 1 ? czFlag : enFlag}
               alt="langFlg"
               className="w-[20px] md:w-[25px] tranisition-all ease duration-200 shadow-2xl"
             />
@@ -224,7 +270,7 @@ function Header() {
             <div className="absolute  top-[-12px] left-[-12px] right-[-12px] hidden flex-col text-sm text-dark bg-gradient-to-b bg-[#EFF0F4] ring-primary/10 ring-1  group-hover:flex shadow-md z-10 ">
               <div className="p-3">
                 <Image
-                  src={lang === 2 ? srFlag : lang === 1 ? skFlag : enFlag}
+                  src={lang === 2 ? srFlag : lang === 1 ? czFlag : enFlag}
                   alt="langFlg"
                   className="w-[20px] md:w-[25px] ring-offset-1 hover:ring-2 ring-primary tranisition-all ease duration-200"
                 />
@@ -239,9 +285,9 @@ function Header() {
                 </Link>
               )}
               {lang != 1 && (
-                <Link href={pathPage + "sk"} className="p-3 ">
+                <Link href={pathPage + "cz"} className="p-3 ">
                   <Image
-                    src={skFlag}
+                    src={czFlag}
                     alt="langFlg"
                     className=" w-[20px] md:w-[25px] ring-offset-1 hover:ring-2 ring-primary tranisition-all ease duration-200"
                   />
