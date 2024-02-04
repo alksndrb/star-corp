@@ -45,7 +45,7 @@ function Home() {
               Your reliable partner in distributing top-quality tobacco products
               for water pipes and FUJIFILM and FAIRTEX products and
               equipment.Our dedication to providing an exceptional experience to
-              users worldwide makes us the industry's top choice.
+              users worldwide makes us the industry&apos;s top choice.
             </h3>
             <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
               <Link
@@ -96,7 +96,7 @@ function Home() {
               FUJIFILM
             </h2>
             <h3 className="text-base px-[1rem] lg:text-xl sm:px-[2rem]">
-              Discover the art of visual storytelling with FUJIFILM's
+              Discover the art of visual storytelling with FUJIFILM&apos;s
               cutting-edge imaging solutions.
             </h3>
             <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
