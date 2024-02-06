@@ -43,17 +43,34 @@ function ContactSR() {
             </p>
 
             <p className="text-base px-[1rem] lg:text-xl sm:px-[2rem] pb-[1rem] sm:pb-[2rem]">
-              <span className="text-top inline-block">
+              <span className="text-top inline-block contactMailLarge">
                 Email: &nbsp;
                 <br /> <br />
               </span>
-              <span className="inline-block">
-                office@starcorpinternational.com <br />
-                business@starcorpinternational.com
+              <span className="inline-block contactMailSmall">
+                Email: &nbsp;
+              </span>
+              <span className="inline-block ">
+                <a
+                  href={"mailto:office@starcorpinternational.com"}
+                  className="contactLink"
+                >
+                  office@starcorpinternational.com
+                </a>
+                <br />
+                <a
+                  href={"mailto:business@starcorpinternational.com"}
+                  className="contactLink"
+                >
+                  business@starcorpinternational.com
+                </a>
               </span>
             </p>
             <p className="text-base px-[1rem] lg:text-xl sm:px-[2rem] pb-[1rem] sm:pb-[6rem]">
-              Kontakt Telefon: +420 739 533 251
+              Kontakt Telefon:{" "}
+              <a href={`tel:+420 739 533 251`} className="contactLink">
+                +420 739 533 251
+              </a>
             </p>
           </div>
         </div>
