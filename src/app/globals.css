@@ -52,3 +52,16 @@
     min-height: calc(100vh - 309px);
   }
 }
+@media (min-width: 371px) {
+  .contactMailSmall {
+    display: none;
+  }
+}
+@media (max-width: 370px) {
+  .contactMailLarge {
+    display: none;
+  }
+}
+.contactLink {
+  color: #5f6a95;
+}
