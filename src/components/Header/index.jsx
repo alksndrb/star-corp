@@ -133,13 +133,6 @@ function Header() {
                 style={{ display: businessClick ? "flex" : "none" }}
               >
                 <Link
-                  href={`/business/hookah-molasses/${pathLang}`}
-                  className=" mx-auto text-center text-[20px]"
-                  onClick={toggle}
-                >
-                  {hookah[lang]}
-                </Link>
-                <Link
                   href={`/business/fujifilm${pathLang}`}
                   className=" mx-auto text-center text-[20px]"
                   onClick={toggle}
@@ -232,12 +225,7 @@ function Header() {
                 {business[lang]}
                 <GravityUiArrowDown className="inline" />
               </div>
-              <Link
-                className="text-center capitalize pt-2 text-[15px] hover:text-primary"
-                href={`/business/hookah-molasses${pathLang}`}
-              >
-                {hookah[lang]}
-              </Link>
+
               <Link
                 className="text-center pt-2 text-[15px] hover:text-primary"
                 href={`/business/fujifilm${pathLang}`}

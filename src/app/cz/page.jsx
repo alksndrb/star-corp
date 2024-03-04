@@ -7,7 +7,6 @@ import Pic2 from "@/public/pic2.jpg";
 import Pic3 from "@/public/pic3.jpg";
 import Pic0 from "@/public/pic0.jpg";
 import Pic4 from "@/public/pic4.jpg";
-import Hookah from "@/public/hookah.jpg";
 import Fujifilm from "@/public/Fujifilm.png";
 import Fairtex from "@/public/Fairtex.png";
 import Link from "next/link";
@@ -43,10 +42,10 @@ function HomeSK() {
               International
             </h2>
             <h3 className="text-base px-[1rem] lg:text-xl sm:px-[2rem]">
-              Váš spolehlivý partner ve distribuci vysoce kvalitních tabákových
-              produktů pro vodní dýmky a produktů a vybavení od FUJIFILM a
-              FAIRTEX. Naše odhodlání poskytovat vynikající zážitek uživatelům
-              po celém světě nás činí špičkou v odvětví.
+              Váš spolehlivý partner při distribuci špičkových produktů a
+              zařízení FUJIFILM a FAIRTEX. Naše oddanost poskytování výjimečného
+              zážitku uživatelům po celém světě nás činí nejlepší volbou v
+              průmyslu.
             </h3>
             <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
               <Link
@@ -61,55 +60,8 @@ function HomeSK() {
             <Image src={Pic0} alt="" className="h-full object-cover" />
           </div>
         </div>
-        {/* Hookah */}
-        <div className="right sm:h-[500px] w-full bg-light flex flex-col sm:flex-row">
-          <div className="h-[300px] sm:h-auto sm:w-[40%]">
-            <Image
-              src={Hookah}
-              alt=""
-              className="h-full object-cover object-bottom"
-            />
-          </div>
-          <div className="mb-[85px] flex flex-col items-center sm:w-[60%] sm:mt-[100px] ">
-            <h2 className="text-2xl font-semibold p-[1rem] text-center lg:text-3xl md:pb-[30px]">
-              Nargila Molasa
-            </h2>
-            <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
-              S vysokými standardy kvality jsou produkty pečlivě formulovány
-              tak, aby uspokojily chuťové preference a požadavky nejnáročnějších
-              uživatelů.
-            </h3>
-            <div className="p-[1rem] w-full flex sm:p-[2rem] justify-end">
-              <Link
-                href={`/business/hookah-molasses/cz`}
-                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
-              >
-                Dozvědět se více
-                <GravityUiArrowRight className="inline" />
-              </Link>
-            </div>
-          </div>
-        </div>
         {/* FujiFilm */}
-        <div className="left h-auto  sm:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
-          <div className="sm:w-[60%] sm:mt-[100px] mb-[70px] flex flex-col items-center">
-            <h2 className="font-semibold p-[1rem] text-2xl text-center lg:text-3xl md:pb-[30px]">
-              FUJIFILM
-            </h2>
-            <h3 className="text-base px-[1rem] lg:text-xl sm:px-[2rem]">
-              Objevte umění vizuálního vyprávění s pokročilými obrazovými
-              řešeními od společnosti FUJIFILM.
-            </h3>
-            <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
-              <Link
-                href={`/business/fujifilm`}
-                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
-              >
-                Dozvědět se více
-                <GravityUiArrowRight className="inline" />
-              </Link>
-            </div>
-          </div>
+        <div className="right sm:h-[500px] w-full bg-light flex flex-col sm:flex-row">
           <div className="h-[300px] sm:h-auto sm:w-[40%]">
             <Image
               src={Pic2}
@@ -117,9 +69,45 @@ function HomeSK() {
               className="h-full object-cover object-top"
             />
           </div>
+          <div className="mb-[85px] flex flex-col items-center sm:w-[60%] sm:mt-[100px] ">
+            <h2 className="text-2xl font-semibold p-[1rem] text-center lg:text-3xl md:pb-[30px]">
+              FUJIFILM
+            </h2>
+            <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
+              Objevte umění vizuálního vyprávění s pokročilými obrazovými
+              řešeními od společnosti FUJIFILM.
+            </h3>
+            <div className="p-[1rem] w-full flex sm:p-[2rem] justify-end">
+              <Link
+                href={`/business/fujifilm/cz`}
+                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
+              >
+                Learn more
+                <GravityUiArrowRight className="inline" />
+              </Link>
+            </div>
+          </div>
         </div>
         {/* Fairtex */}
-        <div className="right sm:h-[500px] w-full bg-light flex flex-col sm:flex-row">
+        <div className="left h-auto  sm:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
+          <div className="sm:w-[60%] sm:mt-[100px] mb-[70px] flex flex-col items-center">
+            <h2 className="font-semibold p-[1rem] text-2xl text-center lg:text-3xl md:pb-[30px]">
+              FAIRTEX Sports Gear
+            </h2>
+            <h3 className="text-base px-[1rem] lg:text-xl sm:px-[2rem]">
+              Od rukavic po tréninkové vybavení, FAIRTEX je vaším důvěryhodným
+              společníkem při dosahování vrcholové sportovní výkonnosti.
+            </h3>
+            <div className="p-[1rem] sm:p-[2rem] w-full flex justify-start ">
+              <Link
+                href={`/business/fairtex/cz`}
+                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
+              >
+                Learn more
+                <GravityUiArrowRight className="inline" />
+              </Link>
+            </div>
+          </div>
           <div className="h-[300px] sm:h-auto sm:w-[40%]">
             <Image
               src={Pic3}
@@ -127,27 +115,10 @@ function HomeSK() {
               className="h-full object-cover object-top"
             />
           </div>
-          <div className="mb-[85px] flex flex-col items-center sm:w-[60%] sm:mt-[100px] ">
-            <h2 className="text-2xl font-semibold p-[1rem] text-center lg:text-3xl md:pb-[30px]">
-              FAIRTEX Sports Gear
-            </h2>
-            <h3 className="px-[1rem] lg:text-xl sm:px-[2rem]">
-              Od rukavic po tréninkové vybavení, FAIRTEX je vaším důvěryhodným
-              společníkem při dosahování vrcholové sportovní výkonnosti.
-            </h3>
-            <div className="p-[1rem] w-full flex sm:p-[2rem] justify-end">
-              <Link
-                href={`/business/fairtex`}
-                className="border-[1px] border-dark border-solid px-[10px] lg:px-[15px] text-lg lg:text-xl py-[5px] bg-dark text-light hover:bg-primary hover:border-dark ease-in duration-200"
-              >
-                Dozvědět se více
-                <GravityUiArrowRight className="inline" />
-              </Link>
-            </div>
-          </div>
         </div>
+
         {/* Partners */}
-        <div className="left lg:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
+        <div className="right lg:h-[500px] w-full bg-light flex flex-col-reverse justify-end sm:flex-row">
           <div className="w-full mt-[100px] flex flex-col items-center">
             <h2 className="font-semibold text-2xl lg:text-3xl">
               Nаši partneři
@@ -167,7 +138,7 @@ function HomeSK() {
           </div>
         </div>
         {/* Contact */}
-        <div className="bottom sm:h-[400px] w-full bg-light flex flex-col sm:flex-row">
+        <div className="bottom-alt sm:h-[400px] w-full bg-light flex flex-col sm:flex-row">
           <div className=" sm:h-full sm:w-[40%] ">
             <Image src={Pic4} alt="" className="h-full object-cover " />
           </div>
