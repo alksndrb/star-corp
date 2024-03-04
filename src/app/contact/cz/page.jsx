@@ -46,7 +46,7 @@ function ContactSK() {
             <p className="text-base px-[1rem] lg:text-xl sm:px-[2rem] pb-[1rem] sm:pb-[2rem]">
               <span className="text-top inline-block contactMailLarge">
                 Email: &nbsp;
-                <br /> <br />
+                <br /> <br /> <br />
               </span>
               <span className="inline-block contactMailSmall">
                 Email: &nbsp;
@@ -57,6 +57,13 @@ function ContactSK() {
                   className="contactLink"
                 >
                   office@starcorpinternational.com
+                </a>
+                <br />
+                <a
+                  href={"mailto:starcorp.internationalsro@gmail.com"}
+                  className="contactLink"
+                >
+                  starcorp.internationalsro@gmail.com
                 </a>
                 <br />
                 <a
